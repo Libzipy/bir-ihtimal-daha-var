@@ -1,7 +1,8 @@
 import React from 'react'
 
-const index = () => {
-  return <div></div>
+const Footer = () => {
+  const nowDate = new Date().getFullYear()
+  return <div className="footer-container">© Copyright {nowDate} - Bir Ihtimal Daha Var</div>
 }
 
-export default index
+export default Footer

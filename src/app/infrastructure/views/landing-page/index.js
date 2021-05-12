@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from '../../components'
+import { Navbar, Footer } from '../../components'
 import LandingTopContent from './landing-top-content'
 import LandingMidContent from './landing-mid-content'
 import LandingBotContent from './landing-bot-content'
@@ -13,6 +13,7 @@ const LandingPage = () => {
         <LandingMidContent />
         <LandingBotContent />
       </div>
+      <Footer />
     </>
   )
 }
