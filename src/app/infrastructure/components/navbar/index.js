@@ -16,7 +16,7 @@ const Navbar = () => {
             <Link to="/">Anasayfa</Link>
           </button>
           <button className="btn-lg navbar-button">
-            <Link to="/start">Uygulama</Link>
+            <Link to="/app">Uygulama</Link>
           </button>
           <button className="btn-lg navbar-button">
             <Link to="/contact">İletişim</Link>

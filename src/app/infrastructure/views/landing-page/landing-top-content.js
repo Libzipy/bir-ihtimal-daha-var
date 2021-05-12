@@ -10,7 +10,7 @@ const LandingTopContent = () => {
           <h1>Bir İhtimal Daha Var</h1>
           <p>Veri setini gir ve yapmak istediklerini chartlar üzerinden görselleştir. </p>
           <button className="btn-lg landing-button">
-            <Link to="/start">Basla</Link>
+            <Link to="/app">Basla</Link>
           </button>
         </div>
       </div>

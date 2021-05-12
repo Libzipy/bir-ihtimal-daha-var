@@ -1,15 +1,15 @@
 import React from 'react'
 import { Navbar, Footer } from '../../components'
-import Start from './start'
+import App from './app'
 
-const StartPage = () => {
+const AppPage = () => {
   return (
     <>
       <Navbar />
-      <Start />
+      <App />
       <Footer />
     </>
   )
 }
 
-export default StartPage
+export default AppPage

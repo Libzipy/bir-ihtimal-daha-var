@@ -1,5 +1,5 @@
 import React from 'react'
-import { LandingPage, StartPage } from './views'
+import { LandingPage, AppPage, ContactPage, OptionPage, ProcessPage, ResultPage } from './views'
 import { BrowserRouter as Routers, Route, Switch } from 'react-router-dom'
 
 const Router = () => {
@@ -7,7 +7,11 @@ const Router = () => {
     <Routers>
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route path="/start" component={StartPage} />
+        <Route path="/app" component={AppPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/app/option" component={OptionPage} />
+        <Route path="/app/process" component={ProcessPage} />
+        <Route path="/app/result" component={ResultPage} />
       </Switch>
     </Routers>
   )
