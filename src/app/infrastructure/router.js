@@ -1,5 +1,5 @@
 import React from 'react'
-import { LandingPage, StartPage } from './pages'
+import { LandingPage, StartPage } from './views'
 import { BrowserRouter as Routers, Route, Switch } from 'react-router-dom'
 
 const Router = () => {

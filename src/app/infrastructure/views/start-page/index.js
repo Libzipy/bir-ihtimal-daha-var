@@ -1,7 +1,7 @@
 import React from 'react'
 
 const StartPage = () => {
-  return <div>StartPage</div>
+  return <div className="furk">StartPage</div>
 }
 
 export default StartPage
