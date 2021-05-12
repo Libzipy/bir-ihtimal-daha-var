@@ -8,8 +8,10 @@ const ProcessPage = () => {
   return (
     <>
       <Navbar />
-      <CheckoutSteps step1 step2 step3 />
-      <div>
+      <div className="center">
+        <CheckoutSteps step1 step2 step3 />
+      </div>
+      <div className="process-container">
         <Timeline />
         <button className="btn-lg ">
           <Link to="/result">Devam Et</Link>

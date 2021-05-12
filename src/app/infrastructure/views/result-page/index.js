@@ -6,8 +6,10 @@ const ResultPage = () => {
   return (
     <>
       <Navbar />
-      <CheckoutSteps step1 step2 step3 step4 />
-      <div>ResultPage</div>
+      <div className="center">
+        <CheckoutSteps step1 step2 step3 step4 />
+      </div>
+      <div className="result-container">ResultPage</div>
       <Footer />
     </>
   )

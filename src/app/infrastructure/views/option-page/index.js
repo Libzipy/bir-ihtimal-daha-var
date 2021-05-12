@@ -7,8 +7,10 @@ const OptionPage = () => {
   return (
     <>
       <Navbar />
-      <CheckoutSteps step1 step2 />
-      <div>
+      <div className="center">
+        <CheckoutSteps step1 step2 />
+      </div>
+      <div className="option-container">
         <button className="btn-lg ">
           <Link to="/process">Devam Et</Link>
         </button>

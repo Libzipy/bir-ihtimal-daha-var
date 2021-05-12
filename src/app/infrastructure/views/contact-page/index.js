@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <>
       <Navbar />
-      <div>ContactPage</div>
+      <div className="contact-container">ContactPage</div>
       <Footer />
     </>
   )
