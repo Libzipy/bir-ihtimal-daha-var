@@ -78,6 +78,12 @@ pre {
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    &:visited,
+    &:hover,
+    &:active {
+        color: inherit;
+    }
 }
 
 /**
