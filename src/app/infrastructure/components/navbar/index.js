@@ -7,11 +7,19 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="navbar-content">
         <div className="navbar-content-left">
-          <img className="logo" src={Logo} />
+          <Link to="/">
+            <img className="logo" src={Logo} />
+          </Link>
         </div>
         <div className="navbar-content-right">
           <button className="btn-lg navbar-button">
-            <Link to="/start">Hadi Başlayalım</Link>
+            <Link to="/">Anasayfa</Link>
+          </button>
+          <button className="btn-lg navbar-button">
+            <Link to="/start">Uygulama</Link>
+          </button>
+          <button className="btn-lg navbar-button">
+            <Link to="/contact">İletişim</Link>
           </button>
         </div>
       </div>
