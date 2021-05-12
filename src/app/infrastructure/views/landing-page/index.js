@@ -1,13 +1,18 @@
 import React from 'react'
 import { Navbar } from '../../components'
 import LandingTopContent from './landing-top-content'
+import LandingMidContent from './landing-mid-content'
+import LandingBotContent from './landing-bot-content'
 
 const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <LandingTopContent />
-      <div className="landing-page">Landing Page</div>
+      <div className="landing-container">
+        <LandingTopContent />
+        <LandingMidContent />
+        <LandingBotContent />
+      </div>
     </>
   )
 }

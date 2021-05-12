@@ -1,3 +1,85 @@
-.landing-page {
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: $bg-color;
+    // height: calc(100vh - 148px);
+
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 90%;
+        height: calc(100vh - 148px);
+
+        .landing-content {
+            &-left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 50%;
+                height: 100%;
+                text-align: left;
+
+                &-center {
+                    padding-left: 4rem;
+                }
+
+                .landing-button {
+                    background-color: $secondary-color;
+                    color: $black-color;
+                }
+
+                h1 {
+                    font-size: 56px;
+                    font-weight: $bold;
+                    color: $black-color;
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    color: $dark-gray-color;
+                }
+            }
+
+            &-right {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 100%;
+
+                &-img {
+                    width: 90%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    &-mid {
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        background: rgb(255, 247, 220);
+        background: linear-gradient(
+            180deg,
+            rgba(255, 247, 220, 1) 0%,
+            rgba(247, 205, 189, 1) 20%,
+            rgba(236, 152, 150, 1) 50%,
+            rgba(247, 209, 192, 1) 80%,
+            rgba(255, 247, 220, 1) 100%
+        );
+    }
+
+    &-bot {
+        min-height: 100vh;
+        height: 100%;
+        width: 100%;
+        background-color: $bg-color;
+    }
 }
