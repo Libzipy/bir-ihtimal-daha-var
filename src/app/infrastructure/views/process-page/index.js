@@ -1,7 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { Navbar, Footer } from '../../components'
+import { CheckoutSteps } from '../../components'
 
 const ProcessPage = () => {
-  return <div>ProcessPage</div>
+  return (
+    <>
+      <Navbar />
+      <CheckoutSteps step1 step2 step3 />
+      <div>
+        <button className="btn-lg ">
+          <Link to="/result">Devam Et</Link>
+        </button>
+      </div>
+      <Footer />
+    </>
+  )
 }
 
 export default ProcessPage
