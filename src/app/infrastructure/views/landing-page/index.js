@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { Navbar } from '../../components'
 
 const LandingPage = () => {
   return (
-    <div className="landing-page">
-      LandingPage
-      <div>
-        <Link to="/start">Start</Link>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <div className="landing-page">Landing Page</div>
+    </>
   )
 }
 

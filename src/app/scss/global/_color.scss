@@ -2,6 +2,10 @@
     -------------- Default Colors --------------
 */
 
+$bg-color: #fff7dc !default;
+$bg-color-light: lighten($bg-color, 5%) !default;
+$bg-color-dark: darken($bg-color, 5%) !default;
+
 $primary-color: #617df6 !default;
 $primary-color-light: lighten($primary-color, 5%) !default;
 $primary-color-dark: darken($primary-color, 5%) !default;
