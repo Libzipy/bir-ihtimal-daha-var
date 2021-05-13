@@ -1,6 +1,6 @@
 import { ADD_DATA, REMOVE_DATA } from '../types/data-constant'
 
-export const addData = (data) => (dispatch, _getState) => {
+export const addData = (data) => async (dispatch) => {
   dispatch({
     type: ADD_DATA,
     payload: data
@@ -9,7 +9,7 @@ export const addData = (data) => (dispatch, _getState) => {
   localStorage.setItem('data', JSON.stringify(data))
 }
 
-export const removeData = (data) => (dispatch, _getState) => {
+export const removeData = () => async (dispatch) => {
   dispatch({
     type: REMOVE_DATA
   })

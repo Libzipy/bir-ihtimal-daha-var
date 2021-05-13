@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
-
+import { useDispatch } from 'react-redux'
+import { addData } from '../../actions/creators/data-actions'
+/* esling-disable */
 const AppContainer = () => {
   const [data, setData] = useState('')
 
+  const dispatch = useDispatch()
+
   const onSubmitHandler = (e) => {
     e.preventDefault()
-    console.log('go')
+    dispatch(addData({ data }))
   }
 
   return (
@@ -19,12 +23,11 @@ const AppContainer = () => {
           onChange={(e) => setData(e.target.value)}
           required
         />
-        <input type="submit" value="Devam Et" />
+        {/* <input type="submit" value="Devam Et" /> */}
 
-        {/* 
         <button className="btn-lg" type="submit">
-          
-        </button> */}
+          Veri Ekle
+        </button>
       </form>
     </div>
   )
