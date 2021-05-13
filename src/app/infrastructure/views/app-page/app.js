@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { CheckoutSteps } from '../../components'
+import AppContainer from './app-container'
 
 const App = () => {
   return (
@@ -8,11 +8,7 @@ const App = () => {
       <div className="center">
         <CheckoutSteps step1 />
       </div>
-      <div className="app-container">
-        <button className="btn-lg ">
-          <Link to="/option">Devam Et</Link>
-        </button>
-      </div>
+      <AppContainer />
     </>
   )
 }
