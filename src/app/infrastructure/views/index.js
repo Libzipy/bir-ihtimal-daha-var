@@ -1,6 +1,6 @@
 export { default as LandingPage } from './landing-page'
+export { default as OptionPage } from './option-page'
 export { default as AppPage } from './app-page'
 export { default as ContactPage } from './contact-page'
-export { default as OptionPage } from './option-page'
 export { default as ProcessPage } from './process-page'
 export { default as ResultPage } from './result-page'

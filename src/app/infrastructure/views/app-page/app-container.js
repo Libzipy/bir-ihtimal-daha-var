@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addData } from '../../actions/creators/data-actions'
-/* esling-disable */
-const AppContainer = () => {
+
+/* eslint-disable react/prop-types */
+const AppContainer = ({ history }) => {
   const [data, setData] = useState('')
 
   const dispatch = useDispatch()
@@ -10,6 +11,7 @@ const AppContainer = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault()
     dispatch(addData({ data }))
+    history.push('/option')
   }
 
   return (
@@ -23,7 +25,6 @@ const AppContainer = () => {
           onChange={(e) => setData(e.target.value)}
           required
         />
-        {/* <input type="submit" value="Devam Et" /> */}
 
         <button className="btn-lg" type="submit">
           Veri Ekle

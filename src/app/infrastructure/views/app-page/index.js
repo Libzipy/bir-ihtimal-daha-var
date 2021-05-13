@@ -2,11 +2,12 @@ import React from 'react'
 import { Navbar, Footer } from '../../components'
 import App from './app'
 
-const AppPage = () => {
+/* eslint-disable react/prop-types */
+const AppPage = ({ history }) => {
   return (
     <>
       <Navbar />
-      <App />
+      <App history={history} />
       <Footer />
     </>
   )
