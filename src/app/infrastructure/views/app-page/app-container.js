@@ -14,22 +14,35 @@ const AppContainer = ({ history }) => {
     history.push('/option')
   }
 
+  const randomGenerator = () => {
+    setData('10, 15, 15')
+  }
+
   return (
     <div className="app-container">
-      <form onSubmit={onSubmitHandler}>
-        <input
-          className="app-container-input"
-          type="text"
-          placeholder="hello"
-          value={data}
-          onChange={(e) => setData(e.target.value)}
-          required
-        />
-
-        <button className="btn-lg" type="submit">
-          Veri Ekle
-        </button>
-      </form>
+      <div className="app-wrapper">
+        <div className="app-description">
+          <h1>Veri Setini Giriniz</h1>
+          <p>Veri setini gir, ornek olarak 10, 15, 15</p>
+        </div>
+        <form onSubmit={onSubmitHandler} className="form-container">
+          <div className="form-container-random" onClick={randomGenerator}>
+            <i className="fas fa-random icon-color"></i>
+          </div>
+          <input
+            className="form-container-input"
+            type="text"
+            placeholder="Veri setini gir"
+            value={data}
+            onChange={(e) => setData(e.target.value)}
+            required
+            title="Veri Girmeden Devam edilmez"
+          />
+          <button className="btn-lg submit-data" type="submit">
+            Veri Ekle
+          </button>
+        </form>
+      </div>
     </div>
   )
 }
