@@ -4,8 +4,13 @@ import React from 'react'
 const Card = (props) => {
   return (
     <div className="option-card" onClick={() => props.handleClick(props.id)}>
-      <h1>{props.title}</h1>
-      <h5>{props.description}</h5>
+      <div className="click-icon" onClick={() => props.handleClick(props.id)}>
+        <i className="fas fa-fingerprint"></i>
+      </div>
+      <div className="option-card-wrapper">
+        <h2 className="option-card-title">{props.title}</h2>
+        <p className="option-card-description">{props.description}</p>
+      </div>
     </div>
   )
 }

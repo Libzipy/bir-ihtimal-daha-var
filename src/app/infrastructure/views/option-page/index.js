@@ -19,7 +19,7 @@ const OptionPage = () => {
         <CheckoutSteps step1 step2 />
       </div>
       <div className="option-container">
-        <div>
+        <div className="option-wrapper">
           {option.map((opt) => (
             <Card
               key={opt.id}

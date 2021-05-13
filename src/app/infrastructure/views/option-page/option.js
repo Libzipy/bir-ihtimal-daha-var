@@ -2,47 +2,47 @@ const option = [
   {
     id: 1,
     title: 'Mod',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 2,
     title: 'Standart Sapma',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 3,
     title: 'Medyan',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 4,
     title: 'Varyans',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 5,
     title: 'Ortalama Mutlak Sapma',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 6,
     title: 'Degisken Kat Sayisi',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 7,
     title: 'Harmonik Ortalama',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 8,
     title: 'Aritmetik Ortalama',
-    description: ''
+    description: 'lorem'
   },
   {
     id: 9,
     title: 'Geometrik Ortalama',
-    description: ''
+    description: 'lorem'
   }
 ]
 
