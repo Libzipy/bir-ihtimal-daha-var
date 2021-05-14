@@ -7,7 +7,6 @@ import { addOption } from '../../actions/creators/option-action'
 /* eslint-disable react/prop-types */
 const OptionPage = ({ history }) => {
   const [option, setOption] = useState(null)
-  // console.log('option =>', option)
   const dispatch = useDispatch()
 
   const handleClick = (id) => {
