@@ -23,10 +23,11 @@
         justify-content: center;
         width: 300px;
         height: 70px;
+        margin: 1rem 0;
 
         span {
             width: 80%;
-            margin-top: 0.5rem;
+            margin: 1rem 0 0.8rem 0;
             padding: 6px;
             border-radius: 10px;
             text-align: center;
@@ -38,7 +39,7 @@
         }
 
         .submit-option {
-            margin-top: 1rem;
+            margin: 1rem 0;
             background-color: $primary-color-light;
             color: $bg-color-dark;
         }

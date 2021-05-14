@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Navbar, Footer, Card, CheckoutSteps } from '../../components'
+import { Navbar, Footer, Card, CheckoutSteps, Alert } from '../../components'
 import data from './data'
 import { useDispatch } from 'react-redux'
 import { addOption } from '../../actions/creators/option-action'
@@ -7,16 +7,22 @@ import { addOption } from '../../actions/creators/option-action'
 /* eslint-disable react/prop-types */
 const OptionPage = ({ history }) => {
   const [option, setOption] = useState(null)
+  const [error, setError] = useState(false)
   const dispatch = useDispatch()
 
   const handleClick = (id) => {
+    setError(false)
     setOption(id)
   }
 
   const onClickHandler = (e) => {
     e.preventDefault()
     dispatch(addOption({ option }))
-    history.push('/process')
+    if (option) {
+      history.push('/process')
+    } else {
+      setError(true)
+    }
   }
 
   const selectTitle = () => {
@@ -43,7 +49,8 @@ const OptionPage = ({ history }) => {
           ))}
         </div>
         <div className="option-select">
-          {option ? <span>{selectTitle()}</span> : <span>Secilmedi</span>}
+          {(option && <span>{selectTitle()}</span>) || <span>Secilmedi</span>}
+          {error && <Alert status="error" text="Fonksiyon Seçmelisiniz 🙄" />}
           <button className="btn-lg submit-option" onClick={onClickHandler}>
             Seç
           </button>
