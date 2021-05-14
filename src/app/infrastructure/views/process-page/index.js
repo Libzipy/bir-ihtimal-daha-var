@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Footer } from '../../components'
 import { CheckoutSteps } from '../../components'
-import Timeline from './timeline'
+import Timelines from './timelines'
 // import { useSelector } from 'react-redux'
 
 const ProcessPage = () => {
@@ -15,8 +15,8 @@ const ProcessPage = () => {
       </div>
       <p></p>
       <div className="process-container">
-        <Timeline />
-        <button className="btn-lg ">
+        <Timelines />
+        <button className="btn-lg submit-option">
           <Link to="/result">Devam Et</Link>
         </button>
       </div>
