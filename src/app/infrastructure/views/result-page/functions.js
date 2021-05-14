@@ -9,10 +9,9 @@ export const aritmetic = (data) => {
   }
 
   sum /= data.length
-
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
-/* eslint-disable  */
 
 // geometrik ortalama
 export const geometrik = (data) => {
@@ -23,10 +22,9 @@ export const geometrik = (data) => {
   }
 
   sum = Math.pow(sum, 1 / data.length)
-
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
-/* eslint-disable  */
 
 // harmonik ortalama
 export const harmonik = (data) => {
@@ -37,6 +35,92 @@ export const harmonik = (data) => {
   }
 
   sum = data.length / sum
+  const a = sum.toFixed(4)
+  return a.toString()
+}
 
-  return sum
+// Ortalama Mutlak sayısı
+export const oms = (data) => {
+  let sum = 0
+  let ort = aritmetic(data)
+  for (let i = 0; i < data.length; i++) {
+    sum += Math.abs(data[i] - ort)
+  }
+  sum /= data.length
+  const a = sum.toFixed(4)
+  return a.toString()
+}
+
+// Standart Sapma
+export const standartsapma = (data) => {
+  let sum = 0
+  let ort = aritmetic(data)
+  for (let i = 0; i < data.length; i++) {
+    sum += Math.pow(Math.abs(data[i] - ort), 2)
+  }
+  sum /= data.length - 1
+  sum = Math.pow(sum, 1 / 2).toFixed(4)
+  return sum.toString()
+}
+
+// Degisim Alma
+export const degisim = (data) => {
+  let sapma = standartsapma(data)
+  let ort = aritmetic(data)
+  const a = ((sapma / ort) * 100).toFixed(4)
+  return a.toString()
+}
+
+// Mod Alma
+export const modeCount = (data) => {
+  let sayac = 0
+  let sec = 0
+  let tut = []
+  let sum = 0
+  let gonder = []
+  let k = 0
+  for (let i = 0; i < data.length; i++) {
+    sec = data[i]
+    for (let j = 0; j <= data.length; j++) {
+      if (sec == data[j]) {
+        sayac++
+      }
+    }
+    sum = sayac
+    tut.push(sayac)
+    sayac = 0
+  }
+  sec = 0
+  sum = 0
+  for (let i = 0; i < tut.length; i++) {
+    sum = Math.max(...tut)
+    sec = tut[i]
+    if (sec == sum) {
+      if (gonder[k - 1] != data[i]) {
+        gonder[k] = data[i]
+        k++
+      }
+    }
+  }
+  return gonder.toString()
+}
+
+//Medyan Alma
+export const median = (data) => {
+  const mid = Math.floor(data.length / 2),
+    nums = [...data].sort((a, b) => a - b)
+  const a = (data.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2).toFixed(4)
+  return a.toString()
+}
+
+//Varyans Hesaplama
+export const varyans = (data) => {
+  let sum = 0
+  let ort = aritmetic(data)
+  for (let i = 0; i < data.length; i++) {
+    sum += Math.pow(Math.abs(data[i] - ort), 2)
+  }
+  sum /= data.length - 1
+  const a = sum.toFixed(4)
+  return a.toString()
 }
