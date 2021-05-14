@@ -1,4 +1,4 @@
-const option = [
+const data = [
   {
     id: 1,
     title: 'Mod',
@@ -46,4 +46,4 @@ const option = [
   }
 ]
 
-export default option
+export default data

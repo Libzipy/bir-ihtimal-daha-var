@@ -1,25 +1,28 @@
-/* eslint-disable */
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Navbar, Footer, Card, CheckoutSteps } from '../../components'
-import option from './option'
+import data from './data'
 import { useDispatch } from 'react-redux'
 import { addOption } from '../../actions/creators/option-action'
 
+/* eslint-disable react/prop-types */
 const OptionPage = ({ history }) => {
-  const [x, setX] = useState(null)
-  console.log(x)
-
+  const [option, setOption] = useState(null)
+  console.log('option =>', option)
   const dispatch = useDispatch()
 
   const handleClick = (id) => {
-    setX(id)
+    setOption(id)
   }
 
   const onClickHandler = (e) => {
     e.preventDefault()
-    dispatch(addOption({ x }))
+    dispatch(addOption({ option }))
     history.push('/process')
+  }
+
+  const selectTitle = () => {
+    const selected = data.filter((x) => x.id === option)
+    return selected[0].title
   }
 
   return (
@@ -30,7 +33,7 @@ const OptionPage = ({ history }) => {
       </div>
       <div className="option-container">
         <div className="option-wrapper">
-          {option.map((opt) => (
+          {data.map((opt) => (
             <Card
               key={opt.id}
               id={opt.id}
@@ -40,10 +43,12 @@ const OptionPage = ({ history }) => {
             />
           ))}
         </div>
-
-        <button className="btn-lg" onClick={onClickHandler}>
-          Seç
-        </button>
+        <div className="option-select">
+          {option ? <span>{selectTitle()}</span> : <span>Secilmedi</span>}
+          <button className="btn-lg submit-option" onClick={onClickHandler}>
+            Seç
+          </button>
+        </div>
       </div>
       <Footer />
     </>
