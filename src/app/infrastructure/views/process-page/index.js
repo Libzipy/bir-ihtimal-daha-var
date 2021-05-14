@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom'
 import { Navbar, Footer } from '../../components'
 import { CheckoutSteps } from '../../components'
 import Timelines from './timelines'
-// import { useSelector } from 'react-redux'
 
 const ProcessPage = () => {
-  // const option = useSelector((state) => state.viewOption)
   return (
     <>
       <Navbar />

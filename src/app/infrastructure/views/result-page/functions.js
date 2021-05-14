@@ -1,6 +1,7 @@
-const data = [10, 12, 15, 20]
+/* eslint-disable  */
 
-export function aritmetic(data) {
+// aritmetik ortalama
+export const aritmetic = (data) => {
   let sum = 0
 
   for (let i = 0; i < data.length; i++) {
@@ -11,8 +12,10 @@ export function aritmetic(data) {
 
   return sum
 }
+/* eslint-disable  */
 
-export function geometrik(data) {
+// geometrik ortalama
+export const geometrik = (data) => {
   let sum = 1
 
   for (let i = 0; i < data.length; i++) {
@@ -23,8 +26,10 @@ export function geometrik(data) {
 
   return sum
 }
+/* eslint-disable  */
 
-export function harmonik(data) {
+// harmonik ortalama
+export const harmonik = (data) => {
   let sum = 0
 
   for (let i = 0; i < data.length; i++) {
@@ -35,5 +40,3 @@ export function harmonik(data) {
 
   return sum
 }
-
-// console.log(harmonik(data))
