@@ -10,7 +10,13 @@ const LandingTopContent = () => {
           <h1>Bir İhtimal Daha Var</h1>
           <p>Veri setini gir ve yapmak istediklerini chartlar üzerinden görselleştir. </p>
           <button className="btn-lg landing-button">
-            <Link to="/app">Basla</Link>
+            <Link to="/app">
+              Başla
+              <i
+                className="fas fa-play"
+                style={{ textAlign: 'center', marginLeft: '0.5rem', fontSize: '1rem' }}
+              ></i>
+            </Link>
           </button>
         </div>
       </div>
