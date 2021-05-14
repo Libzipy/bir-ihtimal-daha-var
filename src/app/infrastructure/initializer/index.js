@@ -3,8 +3,11 @@ uygulamayi tekrardan kullanici geri dondugunde bu datayi alip initial state'e ko
 gelen datayi kaydettigimiz datayi cekip initial state yerlestiriyoruz */
 
 const dataFromStorage = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : []
+const optionFromStorage = localStorage.getItem('option')
+  ? JSON.parse(localStorage.getItem('option'))
+  : []
 
 //  Uygulama ilk calistiginda baslangic state'i
 export const initialState = {
-  data: { data: dataFromStorage }
+  viewData: { data: dataFromStorage, option: optionFromStorage }
 }

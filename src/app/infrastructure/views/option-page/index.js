@@ -3,13 +3,23 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, Footer, Card, CheckoutSteps } from '../../components'
 import option from './option'
+import { useDispatch } from 'react-redux'
+import { addOption } from '../../actions/creators/option-action'
 
-const OptionPage = () => {
+const OptionPage = ({ history }) => {
   const [x, setX] = useState(null)
   console.log(x)
 
+  const dispatch = useDispatch()
+
   const handleClick = (id) => {
     setX(id)
+  }
+
+  const onClickHandler = (e) => {
+    e.preventDefault()
+    dispatch(addOption({ x }))
+    history.push('/process')
   }
 
   return (
@@ -31,8 +41,8 @@ const OptionPage = () => {
           ))}
         </div>
 
-        <button className="btn-lg ">
-          <Link to="/process">Devam Et</Link>
+        <button className="btn-lg" onClick={onClickHandler}>
+          Seç
         </button>
       </div>
       <Footer />
