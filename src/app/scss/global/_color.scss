@@ -9,6 +9,7 @@ $bg-color-dark: darken($bg-color, 5%) !default;
 $primary-color: #617df6 !default;
 $primary-color-light: lighten($primary-color, 5%) !default;
 $primary-color-dark: darken($primary-color, 5%) !default;
+$primary-color-border: darken($primary-color, 1%) !default;
 
 $secondary-color: #fba77f !default;
 $secondary-color-light: lighten($secondary-color, 5%) !default;
