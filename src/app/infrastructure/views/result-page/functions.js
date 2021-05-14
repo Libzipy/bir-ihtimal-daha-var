@@ -9,8 +9,8 @@ export const aritmetic = (data) => {
   }
 
   sum /= data.length
-
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
 
 // geometrik ortalama
@@ -22,8 +22,8 @@ export const geometrik = (data) => {
   }
 
   sum = Math.pow(sum, 1 / data.length)
-
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
 
 // harmonik ortalama
@@ -35,8 +35,8 @@ export const harmonik = (data) => {
   }
 
   sum = data.length / sum
-
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
 
 // Ortalama Mutlak sayısı
@@ -47,7 +47,8 @@ export const oms = (data) => {
     sum += Math.abs(data[i] - ort)
   }
   sum /= data.length
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
 
 // Standart Sapma
@@ -58,15 +59,16 @@ export const standartsapma = (data) => {
     sum += Math.pow(Math.abs(data[i] - ort), 2)
   }
   sum /= data.length - 1
-  sum = Math.pow(sum, 1 / 2)
-  return sum
+  sum = Math.pow(sum, 1 / 2).toFixed(4)
+  return sum.toString()
 }
 
 // Degisim Alma
 export const degisim = (data) => {
   let sapma = standartsapma(data)
   let ort = aritmetic(data)
-  return (sapma / ort) * 100
+  const a = ((sapma / ort) * 100).toFixed(4)
+  return a.toString()
 }
 
 // Mod Alma
@@ -100,14 +102,15 @@ export const modeCount = (data) => {
       }
     }
   }
-  return gonder
+  return gonder.toString()
 }
 
 //Medyan Alma
 export const median = (data) => {
   const mid = Math.floor(data.length / 2),
     nums = [...data].sort((a, b) => a - b)
-  return data.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2
+  const a = (data.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2).toFixed(4)
+  return a.toString()
 }
 
 //Varyans Hesaplama
@@ -118,5 +121,6 @@ export const varyans = (data) => {
     sum += Math.pow(Math.abs(data[i] - ort), 2)
   }
   sum /= data.length - 1
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }

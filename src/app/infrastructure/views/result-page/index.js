@@ -52,7 +52,7 @@ const ResultPage = () => {
         {
           <div className="result-text">
             <div className="result-title">Sonuç</div>
-            {result.toFixed(4)}
+            {result}
           </div>
         }
       </div>
