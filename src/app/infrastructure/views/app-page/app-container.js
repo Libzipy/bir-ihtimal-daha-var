@@ -26,7 +26,7 @@ const AppContainer = ({ history }) => {
       <div className="app-wrapper">
         <div className="app-description">
           <h1>Veri Setini Giriniz</h1>
-          <p>Veri setini gir, ornek olarak 10, 15, 15</p>
+          <p>Veri setini giriniz, örnek olarak : 45,65,22,15,92,35</p>
         </div>
         <form onSubmit={onSubmitHandler} className="form-container">
           <div className="form-container-random" onClick={randomGenerator}>

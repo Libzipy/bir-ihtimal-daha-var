@@ -26,7 +26,14 @@ const ResultPage = () => {
       <div className="center">
         <CheckoutSteps step1 step2 step3 step4 />
       </div>
-      <div className="result-container">{<div>{result}</div>}</div>
+      <div className="result-container">
+        {
+          <div className="result-text">
+            <div className="result-title">Sonuç</div>
+            {result.toFixed(2)}
+          </div>
+        }
+      </div>
       <Footer />
     </>
   )

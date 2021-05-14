@@ -12,6 +12,13 @@
         justify-content: center;
         width: 100%;
 
+        .app-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         .form-container {
             display: flex;
             flex-direction: column;
@@ -46,6 +53,8 @@
                 transition: all 0.15s ease 0s;
                 color: $dark-gray-color;
                 outline: none;
+                text-align: center;
+                text-shadow: 1px 1px 1px #c0bdbd;
 
                 &:focus {
                     border: 1px dashed $orange-color-dark;
