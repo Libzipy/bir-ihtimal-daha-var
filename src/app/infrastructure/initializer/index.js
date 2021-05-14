@@ -9,5 +9,6 @@ const optionFromStorage = localStorage.getItem('option')
 
 //  Uygulama ilk calistiginda baslangic state'i
 export const initialState = {
-  viewData: { data: dataFromStorage, option: optionFromStorage }
+  viewData: { data: dataFromStorage },
+  viewOption: { option: optionFromStorage }
 }

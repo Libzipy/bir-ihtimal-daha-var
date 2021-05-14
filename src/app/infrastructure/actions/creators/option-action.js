@@ -5,7 +5,6 @@ export const addOption = (option) => async (dispatch) => {
     type: ADD_OPTION,
     payload: option
   })
-
   localStorage.setItem('option', JSON.stringify(option))
 }
 
