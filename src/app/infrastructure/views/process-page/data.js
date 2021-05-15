@@ -6,25 +6,25 @@ const descriptionData = [
       {
         title: 'Adim 1',
         color: '$blue-timeline-color',
-        text: 'Bir veri kümesi içinde en sık görülen değerdir',
+        text: 'Mod bir veri kümesi içinde en sık görülen değerdir.',
         position: 'left'
       },
       {
         title: 'Adim 2',
         color: '$blue-timeline-color',
-        text: 'gözlemi kapsayan bir örneklem alınsın x1 x2 x2 x2 x2 x2 x3 x3 x4 x4',
+        text: 'Girdiğiniz veri setini ele alıyoruz.',
         position: 'right'
       },
       {
         title: 'Adim 3',
         color: '$red-timeline-color',
-        text: 'Bu veri serisinde tekrarlar bulunmakta ve çokluk sayımı veri değeri ve frekansa bakılarak yapılmaktadır.',
+        text: 'Girilen veri serisinde tekrarlar bulunup, bulunmadığı kontrol edilir. Bu işlem çokluk sayımı veri değeri ve frekansa bakılarak yapılmaktadır.',
         position: 'left'
       },
       {
         title: 'Adim 4',
         color: '$red-timeline-color',
-        text: 'Uygulanan yöntemleregöre veri dizisinin modu x2 dir; çünkü bu değer en çok tekrar edilmektedir.',
+        text: 'Uygulanan yöntemlere göre girdiğiniz veri dizisinin "modu" çok tekrar eden sayıdır veya sayılardır.',
         position: 'right'
       }
     ]
@@ -36,13 +36,13 @@ const descriptionData = [
       {
         title: 'Adim 1',
         color: '$dark-gray-color',
-        text: 'Herhangi bir konuyla alakalı olarak, serinin, değişkeni ile ortalama değer arasında bulunan fark olarak tanımlanmaktadır',
+        text: 'Herhangi bir konuyla alakalı olarak, serinin, değişkeni ile ortalama değer arasında bulunan fark olarak tanımlanmaktadır.',
         position: 'left'
       },
       {
         title: 'Adim 2',
         color: '$dark-gray-color',
-        text: 'Her xi değeri için xi le ortalama değer olan xj arasında olan farklar xi - xj olarak bulunur.',
+        text: 'Her xi değeri için xi ile ortalama değer olan xj arasında olan farklar xi - xj şeklinde bulunur.',
         position: 'right'
       },
       {
@@ -60,7 +60,7 @@ const descriptionData = [
       {
         title: 'Adim 5',
         color: '$dark-red-color',
-        text: 'Bu varyans değerinin kare kökü alınır.',
+        text: 'Bu varyans değerinin kare kökü alınır ve girdiğiniz veri setinin standart sapmasını elde etmiş oluyoruz.',
         position: 'left'
       }
     ]
@@ -78,25 +78,25 @@ const descriptionData = [
       {
         title: 'Adim 2',
         color: '$dark-gray-color',
-        text: 'Veri sayıları küçükten büyüğe doğru sıralanır.',
+        text: 'Girmiş olduğunuz veri setinin sayıları küçükten büyüğe doğru sıralanır.',
         position: 'right'
       },
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'n gözlem sayısı olmak üzere, medyan değerinin bu seri içindeki sıra numarası bulunur (n+1)/2 ',
+        text: 'n gözlem sayısı olmak üzere, medyan değerinin bu seri içindeki sıra numarası bu formul ile (n+1)/2 bulunur.',
         position: 'left'
       },
       {
         title: 'Adim 4',
         color: '$dark-red-color',
-        text: 'Eğer gözlem sayısı tek ise medyanın sıra numarası bir tam sayı olacaktır, ve doğrudan medyan bulunur.',
+        text: 'Eğer gözlem sayısı tek ise medyanın sıra numarası bir tam sayı olacaktır, ve doğrudan girdiğiniz veri setinin medyanı bulunur.',
         position: 'right'
       },
       {
         title: 'Adim 5',
         color: '$dark-red-color',
-        text: 'Eğer gözlem sayısı çift ise medyanın sıra numarası 1/2 li bir sayı çıkar. Bu durumda bu sayının etrafındaki iki değerin aritmetik ortalaması medyandır.',
+        text: 'Eğer gözlem sayısı çift ise medyanın sıra numarası 1/2 li bir sayı çıkar. Bu durumda bu sayının etrafındaki iki değerin aritmetik ortalaması girdiğiniz verinin medyandır.',
         position: 'left'
       }
     ]
@@ -120,7 +120,7 @@ const descriptionData = [
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'Matematik notasyon kullanılarak bir rassal değişken Var(X) olur.’, step3: ‘Bu tanımlama, eğer beklenen değer varsa, hem ayrık rassal değişkenler hem sürekli rassal değişkenler hem de karışık değişkenler için genel olarak doğrudur. Bu tanımdan ve beklenen değerlerin doğrusal olma niteliğinden varyans karelerin ortalaması eksi ortalamanın karesine eşittir.',
+        text: 'Matematik notasyon kullanılarak bir rassal değişken Var(X) olur. Bu tanımlama, eğer beklenen değer varsa, hem ayrık rassal değişkenler hem sürekli rassal değişkenler hem de karışık değişkenler için genel olarak doğrudur. Bu tanımdan ve beklenen değerlerin doğrusal olma niteliğinden varyans karelerin ortalaması eksi ortalamanın karesine eşittir.',
         position: 'left'
       },
       {
@@ -156,19 +156,19 @@ const descriptionData = [
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'Pozitif uzaklıkları kullanarak, her veri noktasının ortalamasından ne kadar uzakta olduğu hesaplanır.Bunlar, mutlak sapmalar olarak adlandırılır.',
+        text: 'Pozitif uzaklıkları kullanarak, her veri noktasının ortalamasından ne kadar uzakta olduğu hesaplanır. Bunlar, mutlak sapmalar olarak adlandırılır.',
         position: 'left'
       },
       {
         title: 'Adim 4',
         color: '$dark-red-color',
-        text: 'sapmalar toplanır.',
+        text: 'Girilen veri setinden elde ettiğimiz sapmalar toplanır.',
         position: 'right'
       },
       {
         title: 'Adim 5',
         color: '$dark-red-color',
-        text: 'toplamı veri noktası sayısına bölünür. => OMS = Sigma|xi - x|/n',
+        text: 'toplamı veri noktası sayısına bölünür. ve girilmiş veri setinin ortalama mutlak sapması elde edilir.',
         position: 'left'
       }
     ]
@@ -192,13 +192,13 @@ const descriptionData = [
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'Değişim katsayısı küçük olan serilerin diğerlerine göre daha az değişken olduğu söylenir. Bunun anlamı ise seri terimlerinin Aritmetik ortalama etrafında daha homojen olarak dağıldığıdır.',
+        text: 'Değişim katsayısı küçük olan serilerin diğerlerine göre daha az değişkendir. Bunun anlamı ise seri terimlerinin aritmetik ortalama etrafında daha homojen olarak dağıldığıdır.',
         position: 'left'
       },
       {
         title: 'Adim 4',
         color: '$dark-red-color',
-        text: 'DK = s/x . 100',
+        text: 'Sonuç olarak girmiş olduğunuz verinin değişim kaysayısınız bu formul ile elde etmekteyiz: "DK = s/x . 100".',
         position: 'right'
       }
     ]
@@ -210,26 +210,20 @@ const descriptionData = [
       {
         title: 'Adim 1',
         color: '$dark-gray-color',
-        text: 'H = n / 1/x1 + 1/x2 + ... + 1/xn',
+        text: 'Harmonik ortamlama, gözlem sonuçlarının (birim değerilerinin) terslerinin Aritmetik ortamlamasının tersidir.',
         position: 'left'
       },
       {
         title: 'Adim 2',
         color: '$dark-gray-color',
-        text: 'Harmonik ortamlama, gözlem sonuçlarının (birim değerilerinin) terslerinin Aritmetik ortamlamasının tersidir.',
+        text: 'Girmiş olduğunuz veri setinin birim değerleri x1,x2,...,xn gibi gösterilir ise;',
         position: 'right'
       },
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'Birim değerleri x1,x2,...,xn gibi gösterilir ise;',
+        text: 'Girilen verinin Harmonik ortamlamasını şu şekilde hesaplayabiliriz: "H = n / 1/x1 + 1/x2 + ... + 1/xn".',
         position: 'left'
-      },
-      {
-        title: 'Adim 4',
-        color: '$dark-red-color',
-        text: 'Harmonik ortamlama şu şekilde yazılır: H = n / 1/x1 + 1/x2 + ... + 1/xn',
-        position: 'right'
       }
     ]
   },
@@ -246,25 +240,25 @@ const descriptionData = [
       {
         title: 'Adim 2',
         color: '$dark-gray-color',
-        text: 'Aritmetik ortamlama, bir sayı dizisindeki elemanların toplamının eleman sayısına bölünmesi ile elde edilir. İstatistik bilim dalında hem betimsel İstatistik alanında hemde çıkarımsal İstatistik alanında en çok kullanılan merkezi eğilim ölçüsüdür.',
+        text: 'Aritmetik ortamlama, bir sayı dizisindeki elemanların toplamının eleman sayısına bölünmesi ile elde edilir.',
         position: 'right'
       },
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'Aritmetik ortamlama hesaplanması için kullanılan formüller, anakütle büyüklüğü N ve örneklem büyüklüğü n kabul edersek.',
+        text: 'Girmiş olduğunuz verilerin aritmetik ortamlama hesaplanması için kullanılan formüller, anakütle büyüklüğü N ve örneklem büyüklüğü n kabul edersek.',
         position: 'left'
       },
       {
         title: 'Adim 4',
         color: '$dark-red-color',
-        text: 'Anakütle Aritmetik ortamlaması: μ = 1/N Sigma i=1 => N xi = 1/N(x1,x2,...,xN)',
+        text: 'Girilen verinin anakütle aritmetik ortamlaması bu formul ile hesaplanmaktadır: "μ = 1/N Sigma i=1 => N xi = 1/N(x1,x2,...,xN)".',
         position: 'right'
       },
       {
         title: 'Adim 5',
         color: '$dark-red-color',
-        text: 'Örneklem Aritmetik ortamlaması: x = 1/n Sigma i=1 => n xi = 1/n(x1,x2,...,xn)',
+        text: 'Girilen verinin örneklem aritmetik ortamlaması bu formul ile hesaplanmaktadır: "x = 1/n Sigma i=1 => n xi = 1/n(x1,x2,...,xn)".',
         position: 'left'
       }
     ]
@@ -276,19 +270,19 @@ const descriptionData = [
       {
         title: 'Adim 1',
         color: '$dark-gray-color',
-        text: 'G = Kök^n(x1.x2….x3)',
+        text: 'Geometrik ortamlama, birim değerilerinin (gözlem sonuçlarının) birbiriyle çarpımlarının, n birim sayısı olmak üzere, n’inci dereceden köküne denir. Geometrik Ortalama kısaca G harfi ile gösterilir.',
         position: 'left'
       },
       {
         title: 'Adim 2',
         color: '$dark-gray-color',
-        text: 'Geometrik ortamlama, birim değerilerinin (gözlem sonuçlarının) birbiriyle çarpımlarının, n birim sayısı olmak üzere, n’inci dereceden köküne denir. Geometrik Ortalama kısaca G harfi ile gösterilir.',
+        text: 'Girmiş olduğunuz verilerin birim değerleri x1,x2,…,xn gibi gösterilir ise;',
         position: 'right'
       },
       {
         title: 'Adim 3',
         color: '$dark-red-color',
-        text: 'Birim değerleri x1,x2,…,xn gibi gösterilir;’, step3: ‘Birim değerlerin belilenmesinden sonra geometrik orlama şu şekilde gösterilir; G = Kök^n(x1.x2….x3)',
+        text: 'Girilmiş verilerin birim değerlerin belilenmesinden sonra geometrik ortalama bu formul ile elde edilir; "G = Kök^n(x1.x2….x3)".',
         position: 'left'
       }
     ]
