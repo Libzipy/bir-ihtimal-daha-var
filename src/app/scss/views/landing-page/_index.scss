@@ -69,14 +69,14 @@
         height: 100%;
         width: 100%;
         background: rgb(255, 247, 220);
-        background: linear-gradient(
-            189deg,
-            rgba(255, 247, 220, 1) 0%,
-            rgba(255, 247, 220, 1) 33%,
-            rgba(255, 247, 220, 1) 53%,
-            rgba(255, 247, 220, 1) 55%,
-            rgba(97, 125, 246, 0.6699054621848739) 100%
-        );
+        // background: linear-gradient(
+        //     189deg,
+        //     rgba(255, 247, 220, 1) 0%,
+        //     rgba(255, 247, 220, 1) 33%,
+        //     rgba(255, 247, 220, 1) 53%,
+        //     rgba(255, 247, 220, 1) 55%,
+        //     rgba(97, 125, 246, 0.6699054621848739) 100%
+        // );
 
         .landing-wrapper {
             display: flex;
@@ -121,8 +121,8 @@
                         );
 
                         &-empty {
-                            min-width: 568px;
-                            min-height: 389px;
+                            min-width: 560px;
+                            min-height: 370px;
                             right: 0px;
                         }
 
@@ -131,6 +131,136 @@
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
+                            width: 100%;
+
+                            .content-text {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            .random {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 35px;
+                                height: 35px;
+                                background-color: $primary-color;
+                                border-radius: 100%;
+                                top: -12px;
+                                right: -18px;
+                                margin: 1rem;
+
+                                .icon-color {
+                                    color: $bg-color-dark;
+                                }
+                            }
+
+                            .random-generator {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+
+                                .icon-color {
+                                    color: $bg-color-dark;
+                                }
+
+                                .input {
+                                    width: 400px;
+                                    height: 50px;
+                                    background-color: $bg-color-dark;
+                                    padding: 0.5rem;
+                                    border-radius: 0.5rem;
+                                    border: 1px dashed $orange-color-dark;
+                                    transition: all 0.15s ease 0s;
+                                    color: $dark-gray-color;
+                                    outline: none;
+                                    text-align: center;
+                                    text-shadow: 1px 1px 1px #c0bdbd;
+
+                                    &:focus {
+                                        border: 1px dashed $orange-color-dark;
+                                    }
+                                }
+
+                                .random {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    position: absolute;
+                                    width: 35px;
+                                    height: 35px;
+                                    background-color: $primary-color;
+                                    border-radius: 100%;
+                                    top: -25px;
+                                    right: -27px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &-two {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 400px;
+                    margin-bottom: 5rem;
+
+                    &-img {
+                        position: absolute;
+                        z-index: 99;
+                        right: 0px;
+                        transition: all 0.2s ease-in-out;
+                        object-fit: contain;
+
+                        // &:hover {
+                        //     transform: scale(1.1);
+                        // }
+                    }
+
+                    &-left {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        height: 260px;
+                        width: 100%;
+                        background: rgb(255, 190, 97);
+                        background: linear-gradient(
+                            99deg,
+                            rgba(255, 190, 97, 0) 0%,
+                            rgba(255, 190, 97, 0.7063200280112045) 50%,
+                            rgba(255, 190, 97, 1) 100%
+                        );
+
+                        &-empty {
+                            min-width: 568px;
+                            min-height: 389px;
+                            right: 0px;
+                        }
+
+                        &-content {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            width: 100%;
+
+                            .two-text-container {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+
+                                .text {
+                                    margin-bottom: 1rem;
+                                    width: 400px;
+                                    text-align: justify;
+                                }
+                            }
                         }
                     }
                 }
@@ -139,17 +269,37 @@
     }
 
     &-bot {
-        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80vh;
         height: 100%;
         width: 100%;
-        background: rgb(255, 247, 220);
-        background: linear-gradient(
-            351deg,
-            rgba(255, 247, 220, 1) 0%,
-            rgba(255, 247, 220, 1) 33%,
-            rgba(255, 247, 220, 1) 53%,
-            rgba(255, 247, 220, 1) 55%,
-            rgba(97, 125, 246, 0.6699054621848739) 100%
-        );
+        // background: rgb(255, 247, 220);
+        // background: linear-gradient(
+        //     351deg,
+        //     rgba(255, 247, 220, 1) 0%,
+        //     rgba(255, 247, 220, 1) 33%,
+        //     rgba(255, 247, 220, 1) 53%,
+        //     rgba(255, 247, 220, 1) 55%,
+        //     rgba(97, 125, 246, 0.6699054621848739) 100%
+        // );
+        .landing-bot-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .landing-button {
+                background-color: $primary-color;
+                color: $white-color;
+            }
+            h1 {
+                font-size: 64px;
+                margin-bottom: 0;
+            }
+            .porti {
+                text-decoration: underline $primary-color;
+            }
+        }
     }
 }
