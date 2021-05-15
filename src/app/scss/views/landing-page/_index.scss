@@ -62,6 +62,9 @@
     }
 
     &-mid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         min-height: 100vh;
         height: 100%;
         width: 100%;
@@ -74,6 +77,65 @@
             rgba(255, 247, 220, 1) 55%,
             rgba(97, 125, 246, 0.6699054621848739) 100%
         );
+
+        .landing-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .landing-content {
+                &-one {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 500px;
+                    margin-bottom: 1rem;
+
+                    &-img {
+                        position: absolute;
+                        z-index: 99;
+                        left: -4px;
+                        transition: all 0.2s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    &-right {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        height: 260px;
+                        width: 100%;
+                        background: rgb(255, 247, 220);
+                        background: linear-gradient(
+                            266deg,
+                            rgba(255, 247, 220, 1) 0%,
+                            rgba(187, 195, 231, 1) 43%,
+                            rgba(97, 125, 246, 0.9051995798319328) 100%
+                        );
+
+                        &-empty {
+                            min-width: 568px;
+                            min-height: 389px;
+                            right: 0px;
+                        }
+
+                        &-content {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &-bot {
