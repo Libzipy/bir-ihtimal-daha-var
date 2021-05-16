@@ -1,3 +1,43 @@
+.selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1.8rem 0;
+
+    .selected-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 250px;
+        height: 60px;
+        border: 2px dashed $black-color;
+        background-color: $info-color-light;
+        border-radius: 10px;
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: fit-content;
+            background-color: $info-color-dark;
+            border-radius: 10px;
+            border: 2px dashed $black-color;
+            white-space: nowrap;
+            height: 30px;
+            width: fit-content;
+            padding: 3px;
+            top: -20px;
+            left: -65px;
+            font-size: 14px;
+            color: #303e49;
+            font-weight: $semibold;
+        }
+    }
+}
+
 .process-container {
     display: flex;
     flex-direction: column;
