@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { Navbar, Footer, Card, CheckoutSteps, Alert } from '../../components'
 import data from './data'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addOption } from '../../actions/creators/option-action'
 
 /* eslint-disable react/prop-types */
 const OptionPage = ({ history }) => {
   const [option, setOption] = useState(null)
   const [error, setError] = useState(false)
+
   const dispatch = useDispatch()
+  const selectedData = useSelector((data) => data.viewData.data.data)
+  console.log(selectedData)
 
   const handleClick = (id) => {
     setError(false)
@@ -37,6 +40,10 @@ const OptionPage = ({ history }) => {
         <CheckoutSteps step1 step2 />
       </div>
       <div className="option-container">
+        <div className="option-data">
+          <div className="option-data-title">Eklenen veri</div>
+          {selectedData}
+        </div>
         <div className="option-wrapper">
           {data.map((opt) => (
             <Card
