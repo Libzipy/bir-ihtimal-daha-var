@@ -1,5 +1,13 @@
 import React from 'react'
-import { LandingPage, AppPage, ContactPage, OptionPage, ProcessPage, ResultPage } from './views'
+import {
+  LandingPage,
+  AppPage,
+  ContactPage,
+  OptionPage,
+  ProcessPage,
+  ResultPage,
+  NotFoundPage
+} from './views'
 import { BrowserRouter as Routers, Route, Switch } from 'react-router-dom'
 
 const Router = () => {
@@ -12,6 +20,7 @@ const Router = () => {
         <Route path="/option" component={OptionPage} />
         <Route path="/process" component={ProcessPage} />
         <Route path="/result" component={ResultPage} />
+        <Route path="*" component={NotFoundPage} />
       </Switch>
     </Routers>
   )
