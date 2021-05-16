@@ -8,7 +8,9 @@ const LandingTopContent = () => {
       <div className="landing-content-left">
         <div className="landing-content-left-center">
           <h1>Bir İhtimal Daha Var</h1>
-          <p>Veri setini gir ve yapmak istediklerini chartlar üzerinden görselleştir. </p>
+          <p>
+            Veri setini gir ve yapmak istediklerini chartlar üzerinden çözümle ve görselleştir.{' '}
+          </p>
           <button className="btn-lg landing-button">
             <Link to="/app">
               Başla
