@@ -7,6 +7,38 @@
     width: 100%;
     margin: 2rem 0;
 
+    .option-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 250px;
+        height: 60px;
+        border: 2px dashed $black-color;
+        background-color: $yellow-color;
+        border-radius: 10px;
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: fit-content;
+            background-color: $warning-color;
+            border-radius: 10px;
+            border: 2px dashed $black-color;
+            white-space: nowrap;
+            height: 30px;
+            width: fit-content;
+            padding: 3px;
+            top: -14px;
+            left: -55px;
+            font-size: 18px;
+            color: #303e49;
+            font-weight: $semibold;
+        }
+    }
+
     .option-wrapper {
         display: flex;
         flex-wrap: wrap;
