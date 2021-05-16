@@ -4,4 +4,19 @@
     justify-content: center;
     min-height: calc(100vh - 198px);
     width: 100%;
+
+    .notfound-wrapper {
+        flex-direction: column;
+
+        i {
+            font-size: 102px;
+        }
+
+        .submit-option {
+            cursor: pointer;
+            margin: 1rem 0;
+            background-color: $primary-color-light;
+            color: $bg-color-dark;
+        }
+    }
 }
