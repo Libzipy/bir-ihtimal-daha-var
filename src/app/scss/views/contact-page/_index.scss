@@ -1,3 +1,37 @@
 .contact-container {
+    flex-direction: column;
     min-height: calc(100vh - 198px);
+    width: 100%;
+
+    .contact-wrapper {
+        flex-wrap: wrap;
+        width: 80%;
+
+        .contact-profile {
+            flex-direction: column;
+            width: 411px;
+            height: 169px;
+            border: 1px solid $primary-color;
+            margin: 1rem 3rem;
+            border-radius: 10px;
+            position: relative;
+            background-color: rgba($primary-color, 70%);
+
+            &-img {
+                position: absolute;
+                left: -70px;
+                top: 18px;
+            }
+
+            .github,
+            .linkedin {
+                width: 80px;
+                height: 30px;
+                border: 1px solid $primary-color;
+                margin: 4px;
+                background-color: $primary-color;
+                border-radius: 10px;
+            }
+        }
+    }
 }
