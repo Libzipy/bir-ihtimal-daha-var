@@ -124,3 +124,25 @@ export const varyans = (data) => {
   const a = sum.toFixed(4)
   return a.toString()
 }
+
+//Eleman Sayısı Bulma
+export const size = (data) => {
+  let sum = data.length
+  const a = sum.toFixed(0)
+  return a.toString()
+}
+
+//Sıralama Yapma
+export const rank = (data) => {
+  let sort = data.sort(function (a, b) {
+    return a - b
+  })
+  return sort.toString()
+}
+
+//Permütason Hesaplama
+
+export const perm = (data) => {}
+
+//Kombinasyon Hesaplama
+export const comp = (data) => {}

@@ -11,7 +11,11 @@ import {
   degisim,
   modeCount,
   median,
-  varyans
+  varyans,
+  size,
+  comp,
+  perm,
+  rank
 } from './functions'
 import { useSelector } from 'react-redux'
 
@@ -22,7 +26,15 @@ const ResultPage = () => {
   const selectedData = data.data.data.split(',').map(Number)
 
   const result =
-    selected == 9
+    selected == 13
+      ? comp(selectedData)
+      : selected == 12
+      ? perm(selectedData)
+      : selected == 11
+      ? rank(selectedData)
+      : selected == 10
+      ? size(selectedData)
+      : selected == 9
       ? geometrik(selectedData)
       : selected == 8
       ? aritmetic(selectedData)
