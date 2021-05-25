@@ -286,6 +286,114 @@ const descriptionData = [
         position: 'left'
       }
     ]
+  },
+  {
+    id: 10,
+    title: 'Eleman Sayisi',
+    step: [
+      {
+        title: 'Adim 1',
+        color: '$dark-gray-color',
+        text: 'Girmiş olduğunuz veri seti Eleman sayısını hesaplayacak fonksiyona iletilir.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 2',
+        color: '$dark-gray-color',
+        text: 'Aktarılan Elemanlar dizisi tek tek bir döngü içinde bir sayaç tarafından sayılır ve sonuç elde edilmiş olunur.',
+        position: 'right'
+      }
+    ]
+  },
+  {
+    id: 11,
+    title: 'Dizi Sıralama',
+    step: [
+      {
+        title: 'Adim 1',
+        color: '$dark-gray-color',
+        text: 'Girmiş olduğunuz veri seti sıralamayı yapacak fonksiyona iletilir.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 2',
+        color: '$dark-gray-color',
+        text: 'Aktarılan Elemanlar dizisi tek tek bir döngü içinde sıraları belirlenir ve böylece sonuç elde edilir.',
+        position: 'right'
+      }
+    ]
+  },
+  {
+    id: 12,
+    title: 'Permütasyon',
+    step: [
+      {
+        title: 'Adim 1',
+        color: '$dark-gray-color',
+        text: 'Her iki bağımsız değişkenin de ondalık kısmı atılır.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 2',
+        color: '$dark-gray-color',
+        text: 'Sayı veya sayı_seçilen sayısal değilse, PERMÜTASYON işlevi #DEĞER! hata değeri verir.',
+        position: 'right'
+      },
+      {
+        title: 'Adim 3',
+        color: '$dark-gray-color',
+        text: 'Sayı ≤ 0 veya sayı_seçilen < 0 ise, PERMÜTASYON işlevi #SAYI! hata değeri verir.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 4',
+        color: '$dark-gray-color',
+        text: 'Sayı < sayı_seçilen ise, PERMÜTASYON işlevi #SAYI! hata değeri verir.',
+        position: 'right'
+      },
+      {
+        title: 'Adim 5',
+        color: '$dark-gray-color',
+        text: 'Permütasyon sayısının denklemi şöyledir; P(k,n) = n! / (n-k)!',
+        position: 'left'
+      }
+    ]
+  },
+  {
+    id: 13,
+    title: 'Kombinasyon',
+    step: [
+      {
+        title: 'Adim 1',
+        color: '$dark-gray-color',
+        text: 'Sayısal bağımsız değişkenlerin kesirli kısmı atılır.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 2',
+        color: '$dark-gray-color',
+        text: 'Bağımsız değişkenlerden herhangi birisi sayısal değilse, KOMBİNASYON, #DEĞER! hata değerini verir.',
+        position: 'right'
+      },
+      {
+        title: 'Adim 3',
+        color: '$dark-gray-color',
+        text: 'Sayı < 0, sayı_seçilen < 0 ise ya da sayı < sayı_seçilen ise KOMBİNASYON işlevi #SAYI! hata değerini verir.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 4',
+        color: '$dark-gray-color',
+        text: 'Kombinasyon, iç sıralarından bağımsız olarak, nesnelerin herhangi bir kümesi ya da altkümesidir. Kombinasyon, iç sıranın önemli olduğu permütasyondan farklıdır.',
+        position: 'right'
+      },
+      {
+        title: 'Adim 5',
+        color: '$dark-gray-color',
+        text: 'Kombinasyon sayısı aşağıdaki gibidir (sayı = n ve sayı_seçilen = k); C(k,n) = n! / k!(n-k)!',
+        position: 'left'
+      }
+    ]
   }
 ]
 

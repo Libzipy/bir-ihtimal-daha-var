@@ -51,6 +51,27 @@ const data = [
     title: 'Geometrik Ortalama',
     description:
       'Birim değerilerinin birbiriyle çarpımlarının, n birim sayısı olmak üzere, n’inci dereceden köküne denir.'
+  },
+  {
+    id: 10,
+    title: 'Eleman Sayısı',
+    description: 'Girilen veri setinin içinde bulunan veri sayısına denir.'
+  },
+  {
+    id: 11,
+    title: 'Dizi Sıralama',
+    description: 'Girilen veri setinin içinde bulunan verilerin sıralanmasına denir.'
+  },
+  {
+    id: 12,
+    title: 'Permütasyon',
+    description: 'Her sembolün sadece bir veya birkaç kez kullanıldığı sıralı bir dizidir.'
+  },
+  {
+    id: 13,
+    title: 'Kombinasyon',
+    description:
+      'Bir nesne grubu içerisinden sıra gözetmeksizin yapılan seçimlerdir. Nesne grubunun tekabül ettiği kümenin alt kümeleri olarak da tanımlanabilir.'
   }
 ]
 
