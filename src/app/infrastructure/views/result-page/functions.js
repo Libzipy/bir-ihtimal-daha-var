@@ -142,7 +142,31 @@ export const rank = (data) => {
 
 //Permütason Hesaplama
 
-export const perm = (data) => {}
+export const perm = (data, r) => {
+  let n = data.length
+  let secim = r
+  function faktoriel(sayi){
+    var sonuc = 1;
+    for(let i = 0 ; i< sayi; i++){
+      sonuc *= i;
+    }
+    return sonuc;
+  }
+  let sum = faktoriel(n)/(faktoriel(n-secim))
+  return sum;
+}
 
 //Kombinasyon Hesaplama
-export const comp = (data) => {}
+export const comp = (data, r) => {
+  let n = data.length
+  let secim = r
+  function faktoriel(sayi){
+    var sonuc = 1;
+    for(let i = 0 ; i< sayi; i++){
+      sonuc *= i;
+    }
+    return sonuc;
+  }
+  let sum = faktoriel(n)/(faktoriel(r)*faktoriel(n-secim))
+  return sum;
+}
