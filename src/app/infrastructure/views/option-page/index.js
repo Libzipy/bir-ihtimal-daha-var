@@ -11,7 +11,6 @@ const OptionPage = ({ history }) => {
 
   const dispatch = useDispatch()
   const selectedData = useSelector((data) => data.viewData.data.data)
-  console.log(selectedData)
 
   const handleClick = (id) => {
     setError(false)

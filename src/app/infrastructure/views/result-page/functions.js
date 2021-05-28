@@ -145,28 +145,30 @@ export const rank = (data) => {
 export const perm = (data, r) => {
   let n = data.length
   let secim = r
-  function faktoriel(sayi){
-    var sonuc = 1;
-    for(let i = 0 ; i< sayi; i++){
-      sonuc *= i;
+  function faktoriel(sayi) {
+    var sonuc = 1
+    for (let i = 1; i < sayi + 1; i++) {
+      sonuc *= i
     }
-    return sonuc;
+    return sonuc
   }
-  let sum = faktoriel(n)/(faktoriel(n-secim))
-  return sum;
+  let sum = faktoriel(n) / faktoriel(n - secim)
+  const a = sum.toFixed(4)
+  return a.toString()
 }
 
 //Kombinasyon Hesaplama
 export const comp = (data, r) => {
   let n = data.length
   let secim = r
-  function faktoriel(sayi){
-    var sonuc = 1;
-    for(let i = 0 ; i< sayi; i++){
-      sonuc *= i;
+  function faktoriel(sayi) {
+    var sonuc = 1
+    for (let i = 1; i < sayi + 1; i++) {
+      sonuc *= i
     }
-    return sonuc;
+    return sonuc
   }
-  let sum = faktoriel(n)/(faktoriel(r)*faktoriel(n-secim))
-  return sum;
+  let sum = faktoriel(n) / (faktoriel(r) * faktoriel(n - secim))
+  const a = sum.toFixed(4)
+  return a.toString()
 }
