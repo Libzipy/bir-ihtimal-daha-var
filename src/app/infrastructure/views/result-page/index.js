@@ -22,14 +22,16 @@ import { useSelector } from 'react-redux'
 const ResultPage = () => {
   const option = useSelector((state) => state.viewOption)
   const data = useSelector((state) => state.viewData)
+  const param = useSelector((state) => state.viewParam.param.param)
   const selected = option.option.option
   const selectedData = data.data.data.split(',').map(Number)
-
+  const x = parseInt(param)
+  console.log(typeof selectedData)
   const result =
     selected == 13
-      ? comp(selectedData)
+      ? comp(selectedData, x)
       : selected == 12
-      ? perm(selectedData)
+      ? perm(selectedData, x)
       : selected == 11
       ? rank(selectedData)
       : selected == 10
