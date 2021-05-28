@@ -5,7 +5,7 @@ export const paramReducer = (state = { viewParam: { param: [] } }, action) => {
     case ADD_PARAM:
       return { ...state, param: action.payload }
     case REMOVE_PARAM:
-      return { ...state, param: action.payload }
+      return { ...state }
     default:
       return state
   }

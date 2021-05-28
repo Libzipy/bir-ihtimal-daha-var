@@ -1,5 +1,6 @@
 .selected {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -29,11 +30,46 @@
             height: 30px;
             width: fit-content;
             padding: 3px;
-            top: -20px;
-            left: -65px;
+            left: -85px;
             font-size: 14px;
             color: #303e49;
             font-weight: $semibold;
+        }
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 10px;
+
+        .icon-color {
+            color: $bg-color-dark;
+        }
+
+        &-input {
+            width: 400px;
+            height: 50px;
+            background-color: $bg-color-dark;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            border: 1px dashed $orange-color-dark;
+            transition: all 0.15s ease 0s;
+            color: $dark-gray-color;
+            outline: none;
+            text-align: center;
+            text-shadow: 1px 1px 1px #c0bdbd;
+
+            &:focus {
+                border: 1px dashed $orange-color-dark;
+            }
+        }
+
+        .submit-data {
+            margin-top: 1rem;
+            background-color: $primary-color-light;
+            color: $bg-color-dark;
         }
     }
 }
@@ -44,12 +80,11 @@
     justify-content: center;
     align-items: center;
 
-    min-height: calc(100vh - 258px);
-
-    .submit-option {
-        margin: 1.5rem 0;
-        background-color: $primary-color-light;
-        color: $bg-color-dark;
-        width: 200px;
-    }
+    min-height: calc(100vh - 692px);
+}
+.submit-option {
+    margin: 1.5rem 0;
+    background-color: $primary-color !important;
+    color: $bg-color-dark;
+    width: 200px;
 }

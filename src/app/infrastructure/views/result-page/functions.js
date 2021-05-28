@@ -147,27 +147,28 @@ export const perm = (data, r) => {
   let secim = r
   function faktoriel(sayi) {
     var sonuc = 1
-    for (let i = 0; i < sayi; i++) {
+    for (let i = 1; i < sayi + 1; i++) {
       sonuc *= i
     }
     return sonuc
   }
   let sum = faktoriel(n) / faktoriel(n - secim)
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }
 
 //Kombinasyon Hesaplama
 export const comp = (data, r) => {
-  console.log('comp', r)
   let n = data.length
   let secim = r
   function faktoriel(sayi) {
     var sonuc = 1
-    for (let i = 0; i < sayi; i++) {
+    for (let i = 1; i < sayi + 1; i++) {
       sonuc *= i
     }
     return sonuc
   }
   let sum = faktoriel(n) / (faktoriel(r) * faktoriel(n - secim))
-  return sum
+  const a = sum.toFixed(4)
+  return a.toString()
 }

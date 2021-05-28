@@ -26,7 +26,7 @@ const ResultPage = () => {
   const selected = option.option.option
   const selectedData = data.data.data.split(',').map(Number)
   const x = parseInt(param)
-  console.log(typeof selectedData)
+
   const result =
     selected == 13
       ? comp(selectedData, x)
