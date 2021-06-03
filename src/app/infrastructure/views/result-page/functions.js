@@ -173,33 +173,31 @@ export const comp = (n, r) => {
 
 //Histogram Grafiği
 export const histogram = (data, grup) => {
+
   let a = data.sort(function (a, b) {
     return a - b
   })
-  console.log('a', a)
   let b = Math.max(...data)
-  console.log('max b', b)
   let c = Math.min(...data)
-  console.log('min c', c)
   let d = b - c
   let genislik = Math.floor(d / grup)
   if (genislik % 2 == 0) {
     genislik++
   }
-  console.log('genislik', genislik)
   let sonuc = []
   let sayac = 0
   let j = 0
-  for (let i = 0; i < data.length; i++) {
-    if (a[i] == a[j] + genislik) {
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] >= (a[j] + genislik)) {
       sonuc.push(sayac)
-      console.log('a[i]', a[i], 'a[j]', a[j], 'sonuc', sonuc)
       j = i
+      sayac = 1;
     } else {
       sayac++
     }
+    if( i == (a.length - 1)){
+      sonuc.push(sayac)
+    }
   }
-  console.log('sonuc.toString()', sonuc.toString())
-  console.log('sonuc.', sonuc)
-  return sonuc.toString()
+  return sonuc
 }
