@@ -72,6 +72,12 @@ const data = [
     title: 'Kombinasyon',
     description:
       'Bir nesne grubu içerisinden sıra gözetmeksizin yapılan seçimlerdir. Nesne grubunun tekabül ettiği kümenin alt kümeleri olarak da tanımlanabilir.'
+  },
+  {
+    id: 14,
+    title: 'Histogram Grafiği',
+    description:
+      'Histogram bir veri grubundaki değerlerin sınıfllandırılması ve bu yapılasınıflandırmanın özel oluşturulan sütun grafiği ile gösterilmesidir.'
   }
 ]
 

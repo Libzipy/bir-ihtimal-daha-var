@@ -394,6 +394,48 @@ const descriptionData = [
         position: 'left'
       }
     ]
+  },
+  {
+    id: 14,
+    title: 'Histogram Grafiği',
+    step: [
+      {
+        title: 'Adim 1',
+        color: '$dark-gray-color',
+        text: 'Veri grubun küçükten büyüğe sıralanır.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 2',
+        color: '$dark-gray-color',
+        text: 'Veri grubunun açıklığı bulunur.',
+        position: 'right'
+      },
+      {
+        title: 'Adim 3',
+        color: '$dark-gray-color',
+        text: 'Veri açıklığı ve grup sayısı kullanılarak grup genişliği hesaplanır. Grup sayısı duruma göre soruda verilebilir ya da soruyu çözen tarafından belirlenmesi istenebilir.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 4',
+        color: '$dark-gray-color',
+        text: 'Bulunan sayıya en yakın tek sayı grup genişliği olarak alınır. Tek sayı alınmasının sebebi hesaplamalarda  tam sayılar elde ederek işlemi kolaylaştırmaktır.',
+        position: 'right'
+      },
+      {
+        title: 'Adim 5',
+        color: '$dark-gray-color',
+        text: 'Veriler bulunan grup genişliğinde gruplandırıp her gruba ait veri sayısı ile birlikte bir tablo oluşturulur.',
+        position: 'left'
+      },
+      {
+        title: 'Adim 6',
+        color: '$dark-gray-color',
+        text: 'Tablodaki gruplar düşey eksene veri sayıları yatay eksene yerleştirilerek histogram grafiği oluşturulur.',
+        position: 'right'
+      }
+    ]
   }
 ]
 
