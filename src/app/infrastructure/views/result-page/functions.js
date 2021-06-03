@@ -9,7 +9,7 @@ export const aritmetic = (data) => {
   }
 
   sum /= data.length
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }
 
@@ -22,7 +22,7 @@ export const geometrik = (data) => {
   }
 
   sum = Math.pow(sum, 1 / data.length)
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }
 
@@ -35,7 +35,7 @@ export const harmonik = (data) => {
   }
 
   sum = data.length / sum
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }
 
@@ -47,7 +47,7 @@ export const oms = (data) => {
     sum += Math.abs(data[i] - ort)
   }
   sum /= data.length
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }
 
@@ -59,7 +59,7 @@ export const standartsapma = (data) => {
     sum += Math.pow(Math.abs(data[i] - ort), 2)
   }
   sum /= data.length - 1
-  sum = Math.pow(sum, 1 / 2).toFixed(4)
+  sum = Math.pow(sum, 1 / 2).toFixed(2)
   return sum.toString()
 }
 
@@ -67,7 +67,7 @@ export const standartsapma = (data) => {
 export const degisim = (data) => {
   let sapma = standartsapma(data)
   let ort = aritmetic(data)
-  const a = ((sapma / ort) * 100).toFixed(4)
+  const a = ((sapma / ort) * 100).toFixed(2)
   return a.toString()
 }
 
@@ -109,7 +109,7 @@ export const modeCount = (data) => {
 export const median = (data) => {
   const mid = Math.floor(data.length / 2),
     nums = [...data].sort((a, b) => a - b)
-  const a = (data.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2).toFixed(4)
+  const a = (data.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2).toFixed(2)
   return a.toString()
 }
 
@@ -121,7 +121,7 @@ export const varyans = (data) => {
     sum += Math.pow(Math.abs(data[i] - ort), 2)
   }
   sum /= data.length - 1
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }
 
@@ -142,8 +142,7 @@ export const rank = (data) => {
 
 //Permütason Hesaplama
 
-export const perm = (data, r) => {
-  let n = data.length
+export const perm = (n, r) => {
   let secim = r
   function faktoriel(sayi) {
     var sonuc = 1
@@ -153,13 +152,12 @@ export const perm = (data, r) => {
     return sonuc
   }
   let sum = faktoriel(n) / faktoriel(n - secim)
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }
 
 //Kombinasyon Hesaplama
-export const comp = (data, r) => {
-  let n = data.length
+export const comp = (n, r) => {
   let secim = r
   function faktoriel(sayi) {
     var sonuc = 1
@@ -169,6 +167,6 @@ export const comp = (data, r) => {
     return sonuc
   }
   let sum = faktoriel(n) / (faktoriel(r) * faktoriel(n - secim))
-  const a = sum.toFixed(4)
+  const a = sum.toFixed(2)
   return a.toString()
 }

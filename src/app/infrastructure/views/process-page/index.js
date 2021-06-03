@@ -9,7 +9,8 @@ import data from './data'
 import { addParam } from '../../actions/creators/param-actions'
 
 const ProcessPage = ({ history }) => {
-  const [param, setParam] = useState('')
+  const [n, setN] = useState('')
+  const [r, setR] = useState('')
   const [error, setError] = useState(false)
   const option = useSelector((state) => state.viewOption.option.option)
   const selected = data.filter((s) => s.id === option)[0].title
@@ -17,13 +18,13 @@ const ProcessPage = ({ history }) => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault()
-    dispatch(addParam({ param }))
+    dispatch(addParam({ n ,r }))
   }
 
   const pushResult = () => {
-    if (param != '' && (option === 13 || option === 12)) {
+    if (n != '' && (option === 13 || option === 12)) {
       history.push('/result')
-    } else if (param == '' && (option === 13 || option === 12)) {
+    } else if (n == '' && (option === 13 || option === 12)) {
       setError(true)
     } else {
       history.push('/result')
@@ -47,9 +48,18 @@ const ProcessPage = ({ history }) => {
               <input
                 className="form-container-input"
                 type="text"
-                placeholder="Parametre gir"
-                value={param}
-                onChange={(e) => setParam(e.target.value)}
+                placeholder="Toplam veri sayısını giriniz."
+                value={n}
+                onChange={(e) => setN(e.target.value)}
+                required
+                title="Veri Girmeden Devam edilmez"
+              />
+               <input
+                className="form-container-input"
+                type="text"
+                placeholder="Seçilen veri sayısını giriniz"
+                value={r}
+                onChange={(e) => setR(e.target.value)}
                 required
                 title="Veri Girmeden Devam edilmez"
               />
