@@ -170,3 +170,30 @@ export const comp = (n, r) => {
   const a = sum.toFixed(2)
   return a.toString()
 }
+
+//Histogram Grafiği
+export const histogram = (data, grup) => {
+  let a = rank(data);
+  let b = Math.max(...data)
+  let c = Math.min(...data)
+  let d = b - c;
+  let genislik = Math.floor(d / grup);
+  if(genislik % 2 == 0){
+    genislik++;
+  }
+  let sonuc = [];
+  let sayac = 0;
+  let j = 0;
+  let k = 0;
+  for(let i = 0; i< data.length; i++){
+    if(data[i] == data[j] + genislik){
+      sonuc[k] += sayac;
+      j += genislik;
+      k++;
+    }
+    else{
+      sayac++; 
+    }
+  }
+  return sonuc
+}
