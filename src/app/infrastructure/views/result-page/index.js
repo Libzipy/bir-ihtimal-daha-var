@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react'
-import { Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2'
 import { Navbar, Footer } from '../../components'
 import { CheckoutSteps } from '../../components'
 import {
@@ -25,16 +25,19 @@ const ResultPage = () => {
   const option = useSelector((state) => state.viewOption)
   const data = useSelector((state) => state.viewData)
   const param = useSelector((state) => state.viewParam.param)
-  const {n,r} = param
+  const { n, r } = param
   const selected = option.option.option
   const selectedData = data.data.data.split(',').map(Number)
   const converN = parseInt(n)
   const converR = parseInt(r)
-  
+  console.log('selectedData', selectedData)
+
+  const grup = 2
+
   const result =
     selected == 14
-      ? histogram(data, grup)
-      :  selected == 13
+      ? histogram(selectedData, grup)
+      : selected == 13
       ? comp(converN, converR)
       : selected == 12
       ? perm(converR, converR)
@@ -62,14 +65,14 @@ const ResultPage = () => {
       ? modeCount(selectedData)
       : 0
 
-      const getRandomColor = () => {
-        let letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
+  const getRandomColor = () => {
+    let letters = '0123456789ABCDEF'
+    let color = '#'
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)]
     }
+    return color
+  }
 
   return (
     <>
