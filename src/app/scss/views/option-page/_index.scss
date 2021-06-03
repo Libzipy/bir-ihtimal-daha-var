@@ -12,11 +12,16 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 250px;
+        width: fit-content;
+        padding: 0 4rem;
         height: 60px;
         border: 2px dashed $black-color;
         background-color: $yellow-color;
         border-radius: 10px;
+
+        &-data {
+            display: flex;
+        }
 
         &-title {
             display: flex;
