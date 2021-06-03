@@ -41,7 +41,7 @@ const OptionPage = ({ history }) => {
       <div className="option-container">
         <div className="option-data">
           <div className="option-data-title">Eklenen veri</div>
-          {selectedData}
+          <div className="option-data-data">{selectedData}</div>
         </div>
         <div className="option-wrapper">
           {data.map((opt) => (

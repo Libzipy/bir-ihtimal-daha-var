@@ -15,7 +15,7 @@ const AppContainer = ({ history }) => {
   }
 
   const randomGenerator = () => {
-    const random = Array(6)
+    const random = Array(Math.round(Math.random() * 15 + 1))
       .fill()
       .map(() => Math.round(Math.random() * 99))
     setData(random.toString())

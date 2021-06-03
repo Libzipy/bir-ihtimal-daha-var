@@ -11,6 +11,7 @@ import { addParam } from '../../actions/creators/param-actions'
 const ProcessPage = ({ history }) => {
   const [n, setN] = useState('')
   const [r, setR] = useState('')
+  const [d, setD] = useState('')
   const [error, setError] = useState(false)
   const option = useSelector((state) => state.viewOption.option.option)
   const selected = data.filter((s) => s.id === option)[0].title
@@ -18,13 +19,20 @@ const ProcessPage = ({ history }) => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault()
-    dispatch(addParam({ n ,r }))
+    dispatch(addParam({ n, r }))
+  }
+
+  const onSubmitHandlerTwo = (e) => {
+    e.preventDefault()
+    localStorage.setItem('harmonik', d)
   }
 
   const pushResult = () => {
     if (n != '' && (option === 13 || option === 12)) {
       history.push('/result')
     } else if (n == '' && (option === 13 || option === 12)) {
+      setError(true)
+    } else if (d == '' && option === 14) {
       setError(true)
     } else {
       history.push('/result')
@@ -43,6 +51,22 @@ const ProcessPage = ({ history }) => {
           {selected}
         </div>
         <div className="center">
+          {option === 14 && (
+            <form onSubmit={onSubmitHandlerTwo} className="form-container">
+              <input
+                className="form-container-input"
+                type="text"
+                placeholder="Kacli gruplamak istediginizi giriniz."
+                value={d}
+                onChange={(e) => setD(e.target.value)}
+                required
+                title="Veri Girmeden Devam edilmez"
+              />
+              <button className="btn-lg submit-data" type="submit">
+                Parametre Ekle
+              </button>
+            </form>
+          )}
           {(option === 13 || option === 12) && (
             <form onSubmit={onSubmitHandler} className="form-container">
               <input
@@ -54,7 +78,7 @@ const ProcessPage = ({ history }) => {
                 required
                 title="Veri Girmeden Devam edilmez"
               />
-               <input
+              <input
                 className="form-container-input"
                 type="text"
                 placeholder="Seçilen veri sayısını giriniz"
