@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React from 'react'
+import { Bar } from 'react-chartjs-2';
 import { Navbar, Footer } from '../../components'
 import { CheckoutSteps } from '../../components'
 import {
@@ -15,7 +16,8 @@ import {
   size,
   comp,
   perm,
-  rank
+  rank,
+  histogram
 } from './functions'
 import { useSelector } from 'react-redux'
 
@@ -28,9 +30,11 @@ const ResultPage = () => {
   const selectedData = data.data.data.split(',').map(Number)
   const converN = parseInt(n)
   const converR = parseInt(r)
-
+  
   const result =
-    selected == 13
+    selected == 14
+      ? histogram(data, grup)
+      :  selected == 13
       ? comp(converN, converR)
       : selected == 12
       ? perm(converR, converR)
